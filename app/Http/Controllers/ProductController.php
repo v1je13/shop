@@ -28,4 +28,9 @@ class ProductController extends Controller
         $product->create($data);//создаем новую запись в БД
         return redirect()->back();
     }
+
+    public function show(Product $product)
+    {
+        return view('products.show', compact('product'));
+    }
 }
