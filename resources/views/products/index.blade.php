@@ -7,8 +7,18 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    <header>
+    <header class="flex justify-between">
         <h1>Интернет-магазин</h1>
+        <nav>
+            <ul class="flex gap-4">
+                <li>
+                    <a href="{{route('products.index')}}">Главная</a>
+                </li>
+                <li>
+                    <a href="{{route('products.create')}}">Создать продукт</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div class="container mx-auto">
